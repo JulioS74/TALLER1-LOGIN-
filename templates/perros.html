@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perros</title>
+</head>
+<body>
+    <h1>Estas son los perros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for perro in perros%}
+            <tr>
+                <td>{{perro.id}}</td>
+                <td>{{perro.nombre}}</td>
+                <td>{{perro.raza}}</td>
+                <td>{{perro.edad}}</td>
+                <td>{{perro.peso}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

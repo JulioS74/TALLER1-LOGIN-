@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guarderias</title>
+</head>
+<body>
+    <h1>Estas son las guarderias</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Teléfono</th>
+                <th>Listado de perros asociados</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for guarderia in guarderias%}
+            <tr>
+                <td>{{guarderia.id}}</td>
+                <td>{{guarderia.nombre}}</td>
+                <td>{{guarderia.direccion}}</td>
+                <td>{{guarderia.telefono}}</td>
+                <td>
+                    <ul>
+                        {% for perro in guarderia.perros %}
+                            <li>{{perro.nombre}}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
